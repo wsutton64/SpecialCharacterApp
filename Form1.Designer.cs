@@ -46,6 +46,8 @@
             this.de_cap_s = new System.Windows.Forms.Label();
             this.versionLabel = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.esp_low_n = new System.Windows.Forms.Label();
+            this.es_cap_n = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // clickcharLabel
@@ -229,17 +231,43 @@
             // versionLabel
             // 
             this.versionLabel.AutoSize = true;
-            this.versionLabel.Location = new System.Drawing.Point(444, 289);
+            this.versionLabel.Location = new System.Drawing.Point(435, 289);
             this.versionLabel.Name = "versionLabel";
-            this.versionLabel.Size = new System.Drawing.Size(28, 13);
+            this.versionLabel.Size = new System.Drawing.Size(37, 13);
             this.versionLabel.TabIndex = 15;
-            this.versionLabel.Text = "v1.0";
+            this.versionLabel.Text = "v1.0.1";
+            // 
+            // esp_low_n
+            // 
+            this.esp_low_n.AutoSize = true;
+            this.esp_low_n.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.esp_low_n.Location = new System.Drawing.Point(246, 228);
+            this.esp_low_n.Name = "esp_low_n";
+            this.esp_low_n.Size = new System.Drawing.Size(29, 31);
+            this.esp_low_n.TabIndex = 17;
+            this.esp_low_n.Text = "ñ";
+            this.toolTip1.SetToolTip(this.esp_low_n, "Click to copy");
+            this.esp_low_n.Click += new System.EventHandler(this.charClickEvent);
+            // 
+            // es_cap_n
+            // 
+            this.es_cap_n.AutoSize = true;
+            this.es_cap_n.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.es_cap_n.Location = new System.Drawing.Point(199, 228);
+            this.es_cap_n.Name = "es_cap_n";
+            this.es_cap_n.Size = new System.Drawing.Size(34, 31);
+            this.es_cap_n.TabIndex = 16;
+            this.es_cap_n.Text = "Ñ";
+            this.toolTip1.SetToolTip(this.es_cap_n, "Click to copy");
+            this.es_cap_n.Click += new System.EventHandler(this.charClickEvent);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 311);
+            this.Controls.Add(this.esp_low_n);
+            this.Controls.Add(this.es_cap_n);
             this.Controls.Add(this.versionLabel);
             this.Controls.Add(this.de_low_s);
             this.Controls.Add(this.de_cap_s);
@@ -285,6 +313,8 @@
         private System.Windows.Forms.Label de_cap_s;
         private System.Windows.Forms.Label versionLabel;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label esp_low_n;
+        private System.Windows.Forms.Label es_cap_n;
     }
 }
 
